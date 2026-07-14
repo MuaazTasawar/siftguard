@@ -1,0 +1,147 @@
+/* SiftGuard — Overlay & injected UI styles */
+/* Phase 1: base resets. Phase 4 adds the full block overlay. */
+
+#siftguard-overlay {
+  all: initial;
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#siftguard-overlay.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Backdrop */
+#siftguard-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+/* Card */
+#siftguard-overlay-card {
+  position: relative;
+  background: #1a1a1a;
+  border: 1px solid #CC0000;
+  border-radius: 12px;
+  padding: 32px 36px;
+  max-width: 480px;
+  width: calc(100% - 48px);
+  box-shadow: 0 0 0 1px rgba(204, 0, 0, 0.3), 0 24px 64px rgba(0, 0, 0, 0.7);
+  color: #f0f0f0;
+  text-align: center;
+}
+
+#siftguard-overlay-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+#siftguard-overlay-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff4444;
+  margin: 0 0 8px;
+}
+
+#siftguard-overlay-subtitle {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+#siftguard-overlay-flags {
+  background: #111;
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+#siftguard-overlay-flags p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+}
+
+#siftguard-overlay-flags ul {
+  margin: 0;
+  padding: 0 0 0 16px;
+}
+
+#siftguard-overlay-flags li {
+  font-size: 13px;
+  color: #f0f0f0;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+#siftguard-overlay-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+#siftguard-btn-leave {
+  background: #CC0000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#siftguard-btn-leave:hover {
+  background: #e60000;
+}
+
+#siftguard-btn-proceed {
+  background: transparent;
+  color: #888;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+#siftguard-btn-proceed:hover {
+  color: #ccc;
+  border-color: #555;
+}
+
+/* Blocked password field highlight */
+input[data-siftguard-blocked="true"] {
+  outline: 3px solid #CC0000 !important;
+  background: rgba(204, 0, 0, 0.08) !important;
+}
+
+/* Temp banner (Phase 1 only, removed in Phase 4) */
+#siftguard-temp-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 2147483647;
+  background: #CC0000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 16px;
+}

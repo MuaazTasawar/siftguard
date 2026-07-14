@@ -1,0 +1,132 @@
+/* SiftGuard Popup — 360px wide, dark theme */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 360px;
+  background: #111;
+  color: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+}
+
+.sg-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.sg-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid #222;
+}
+
+.sg-logo { font-size: 22px; }
+
+.sg-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sg-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f0f0f0;
+  letter-spacing: 0.01em;
+}
+
+.sg-version {
+  font-size: 11px;
+  color: #555;
+}
+
+/* ── Status card ─────────────────────────────────────────── */
+.sg-status-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #1e1e1e;
+  transition: background 0.2s;
+}
+
+.sg-status-scanning { background: #1a1a1a; }
+.sg-status-safe     { background: #0d1f14; }
+.sg-status-warn     { background: #1f1700; }
+.sg-status-danger   { background: #1f0000; }
+.sg-status-unknown  { background: #1a1a1a; }
+
+.sg-status-icon  { font-size: 24px; }
+.sg-status-label { font-size: 13px; font-weight: 600; color: #e0e0e0; }
+
+/* ── Section ─────────────────────────────────────────────── */
+.sg-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.sg-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.sg-domain {
+  font-size: 13px;
+  color: #ccc;
+  word-break: break-all;
+}
+
+/* ── Risk rows ───────────────────────────────────────────── */
+.sg-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.sg-row:last-child { border-bottom: none; }
+
+.sg-row-label { color: #888; font-size: 12px; }
+
+.sg-score {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.sg-ok     { color: #4ade80; background: rgba(74, 222, 128, 0.1); }
+.sg-warn   { color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
+.sg-danger { color: #f87171; background: rgba(248, 113, 113, 0.1); }
+
+/* ── Flags list ──────────────────────────────────────────── */
+.sg-flags-list {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sg-flags-list li {
+  font-size: 12px;
+  color: #f87171;
+  line-height: 1.4;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.sg-footer {
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 10px;
+  color: #333;
+}

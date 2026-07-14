@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiftGuard</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="sg-popup">
+
+    <!-- Header -->
+    <header class="sg-header">
+      <span class="sg-logo">⚔️</span>
+      <div class="sg-header-text">
+        <span class="sg-name">SiftGuard</span>
+        <span class="sg-version">v1.0.0</span>
+      </div>
+    </header>
+
+    <!-- Status card -->
+    <div class="sg-status-card" id="sg-status-card">
+      <div class="sg-status-icon" id="sg-status-icon">⏳</div>
+      <div class="sg-status-label" id="sg-status-label">Scanning page…</div>
+    </div>
+
+    <!-- Domain info -->
+    <div class="sg-section">
+      <div class="sg-section-title">Current Page</div>
+      <div class="sg-domain" id="sg-domain">—</div>
+    </div>
+
+    <!-- Risk breakdown -->
+    <div class="sg-section">
+      <div class="sg-section-title">Risk Breakdown</div>
+      <div class="sg-row">
+        <span class="sg-row-label">Domain Risk</span>
+        <span class="sg-score" id="sg-domain-score">—</span>
+      </div>
+      <div class="sg-row">
+        <span class="sg-row-label">Visual Clone</span>
+        <span class="sg-score" id="sg-visual-score">—</span>
+      </div>
+      <div class="sg-row">
+        <span class="sg-row-label">Credential Block</span>
+        <span class="sg-score" id="sg-blocked">—</span>
+      </div>
+    </div>
+
+    <!-- Flags list -->
+    <div class="sg-section" id="sg-flags-section" style="display:none;">
+      <div class="sg-section-title">Flags Detected</div>
+      <ul class="sg-flags-list" id="sg-flags-list"></ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sg-footer">
+      <span>SiftGuard — Client-side phishing detection</span>
+    </footer>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
