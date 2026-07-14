@@ -1,0 +1,88 @@
+{
+  "legitimateDomains": [
+    "hbl.com",
+    "google.com",
+    "facebook.com",
+    "instagram.com",
+    "twitter.com",
+    "x.com",
+    "linkedin.com",
+    "github.com",
+    "microsoft.com",
+    "live.com",
+    "outlook.com",
+    "hotmail.com",
+    "apple.com",
+    "icloud.com",
+    "amazon.com",
+    "paypal.com",
+    "stripe.com",
+    "bankislami.com.pk",
+    "meezanbank.com",
+    "ubl.com.pk",
+    "mcb.com.pk",
+    "alfalahbank.com",
+    "jazzcash.com.pk",
+    "easypaisa.com.pk",
+    "daraz.pk"
+  ],
+  "knownPhishingPatterns": [
+    "hbl-secure",
+    "hbl-login",
+    "hbl-verify",
+    "google-verify",
+    "google-login",
+    "facebook-login",
+    "paypal-secure",
+    "apple-id-verify",
+    "microsoft-login",
+    "account-verify",
+    "secure-login",
+    "banking-secure",
+    "update-account",
+    "confirm-identity"
+  ],
+  "suspiciousTLDs": [
+    ".tk", ".ml", ".ga", ".cf", ".gq",
+    ".xyz", ".top", ".club", ".online",
+    ".site", ".info", ".biz", ".pw",
+    ".cc", ".ws", ".to"
+  ],
+  "loginPagePaths": [
+    "/login", "/signin", "/sign-in",
+    "/account/login", "/auth/login",
+    "/user/login", "/session/new",
+    "/wp-login.php", "/admin/login",
+    "/secure/login", "/banking/login"
+  ],
+  "visualTargets": [
+    {
+      "id": "hbl",
+      "name": "HBL Bank",
+      "legitimateDomain": "hbl.com",
+      "primaryColor": "#00a651",
+      "loginPath": "/personal"
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "legitimateDomain": "google.com",
+      "primaryColor": "#4285f4",
+      "loginPath": "/accounts/login"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "legitimateDomain": "facebook.com",
+      "primaryColor": "#1877f2",
+      "loginPath": "/login"
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "legitimateDomain": "paypal.com",
+      "primaryColor": "#003087",
+      "loginPath": "/signin"
+    }
+  ]
+}
